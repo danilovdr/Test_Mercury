@@ -1,5 +1,5 @@
 function sendLogin() {
-    let emailContainer = document.getElementById("email-container");
+    let emailContainer = document.getElementById("email");
     emailContainer.style.border = "1px solid #f1f1f1";
 
     let warning = document.getElementById("error");
@@ -46,10 +46,8 @@ function wrongPassword(error) {
     let e = document.getElementById("error-text");
     e.textContent = error.error;
 
-    let emailContainer = document.getElementById("email-container");
-    emailContainer.style.border = "1px solid #ED4159";
-
     let email = document.getElementById("email");
+    email.style.border = "1px solid #ED4159";
     email.style.color = "#ED4159";
 
     let pass = document.getElementById("password");

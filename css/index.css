@@ -74,33 +74,38 @@ body {
     opacity: 80%;
 }
 
+/* .input-container {
+    margin: 0 8% 5% 8%;
+    background-color: #f1f1f1;
+    border: 0;
+} */
+
 .input-container {
     margin: 0 8% 5% 8%;
-    padding: 15px;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 0 14px 14px;
     background-color: #f1f1f1;
     border: 1px solid #f1f1f1;
     border-radius: 4px;
 }
 
-.input-container input {
-    width: 95%;
-    background-color: inherit;
-    padding: 0;
-    border: 0;
-}
-
-.input-container input {
+.input {
     font-family: Gotham, serif;
     color: #262626;
     font-size: 16px;
     line-height: 19px;
 }
 
-.input-container input::placeholder {
+.input::placeholder {
+    margin-left: 15px;
     opacity: 40%;
 }
 
-.input-container input:focus {
+.input:focus {
     opacity: 80%;
 }
 
