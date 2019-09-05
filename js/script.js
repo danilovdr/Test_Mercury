@@ -56,6 +56,7 @@ function wrongLogin(response) {
     let email = inputs.item(0);
     email.style.border = ERROR_BORDER_EMAIL;
     email.style.color = ERROR_COLOR_EMAIL;
+    email.style.opacity = "1";
 
     let pass = inputs.item(1);
     pass.value = "";
