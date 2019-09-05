@@ -1,49 +1,79 @@
 /* Desktop */
 @media screen and (min-width: 980px) {
     .logo {
-        padding: 6% 0 6%;
+        margin: 142px auto 125px auto;
     }
 
     .user {
         width: 600px;
+        padding: 48px 0 60px;
     }
 
-    .logout button {
-        width: 25%;
+    .user__pictures {
+        width: 128px;
+    }
+
+    .user__name {
+        margin: 40px 0 0 0;
+
+        line-height: 34px;
+    }
+
+    .user__logout {
+        margin: 56px auto 0 auto;
     }
 }
 
 /* Tablet */
-@media screen and (max-width: 979px){
+@media screen and (max-width: 979px) {
     .logo {
-        padding: 10% 0 8%;
+        margin: 142px auto 125px auto;
     }
 
     .user {
-        width: 80%;
+        width: 450px;
+        padding: 48px 0 60px;
     }
 
-    .logout button {
-        width: 30%;
+    .user__pictures {
+        width: 128px;
+    }
+
+    .user__name {
+        margin: 40px 0 0 0;
+
+        line-height: 34px;
+    }
+
+    .user__logout {
+        margin: 56px auto 0 auto;
     }
 }
 
 /* Mobile */
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
     .logo {
-        padding: 15% 0 10%;
-    }
-
-    .logo img{
-        width: 80%;
+        margin: 43px auto 37px auto;
+        width: 182px;
     }
 
     .user {
         width: 90%;
+        padding: 32px 0 48px;
     }
 
-    .logout button {
-        width: 50%;
+    .user__pictures {
+        width: 86px;
+    }
+
+    .user__name {
+        margin: 24px 0 0 0;
+
+        line-height: 22px;
+    }
+
+    .user__logout {
+        margin: 39px auto 0 auto;
     }
 }
 
@@ -53,68 +83,54 @@ body {
 }
 
 .logo {
-    text-align: center;
+    display: block;
 }
 
 .user {
     margin: auto;
     background-color: #ffffff;
-    border-radius:8px;
+    border-radius: 8px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
 }
 
-.userpic {
-    padding-top: 8%;
-    text-align: center;
-}
-
-#userpic {
+.user__pictures {
+    display: block;
+    margin: auto;
     border-radius: 360px;
-    width: 128px;
 }
 
-.username {
-    padding-top: 6%;
-}
-
-.username p {
-    margin: 0;
+.user__name {
     font-size: 24px;
     font-family: GothamBold, serif;
-    opacity: 80%;
+    opacity: 0.8;
 }
 
-.logout {
-    text-align: center;
-    padding: 10% 0 10% 0;
-}
-
-.logout button {
-    padding: 15px 0 15px 0;
+.user__logout {
+    display: block;
+    height: 48px;
+    width: 145px;
     border: 0;
     border-radius: 100px;
     background-color: #ED4159;
     box-shadow: 0 4px 16px rgba(237, 65, 89, 0.4);
-}
 
-.logout button {
     font-family: Gotham, serif;
     font-size: 14px;
     line-height: 17px;
     color: white;
 }
 
-.logout button:hover,
-.logout button:active {
+.user__logout:hover,
+.user__logout:active {
     background-color: white;
     color: #ED4159;
 }
 
-.logout button:hover {
+.user__logout:hover {
     box-shadow: 0 6px 20px rgba(237, 65, 89, 0.4);
 }
 
-.logout button:active {
+.user__logout:active {
     box-shadow: 0 2px 10px rgba(237, 65, 89, 0.5);
 }
 

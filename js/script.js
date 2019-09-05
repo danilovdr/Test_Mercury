@@ -1,17 +1,9 @@
+const ERROR_COLOR_EMAIL = "#ED4159";
+const ERROR_BORDER_EMAIL = "1px solid #ED4159";
+
+
 function sendLogin() {
-    let emailContainer = document.getElementById("email");
-    emailContainer.style.border = "1px solid #f1f1f1";
-
-    let warning = document.getElementById("error");
-    warning.style.display = "none";
-
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-
-    let login = {
-        "email": email,
-        "password": password,
-    };
+    let login = getLogin();
 
     let json = JSON.stringify(login);
 
@@ -21,17 +13,12 @@ function sendLogin() {
 
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
-            let obj = JSON.parse(xhr.responseText);
+            let response = JSON.parse(xhr.responseText);
 
             if (xhr.status === 200) {
-                let user = {};
-                user.name = obj.name;
-                user.photoUrl = obj.photoUrl;
-                localStorage.setItem("username", obj.name);
-                localStorage.setItem("userPic", obj.photoUrl);
-                accessLogin(obj)
+                accessLogin(response)
             } else if (xhr.status === 400) {
-                wrongPassword(obj);
+                wrongLogin(response);
             }
         }
     };
@@ -39,21 +26,38 @@ function sendLogin() {
     xhr.send(json);
 }
 
-function wrongPassword(error) {
-    let warning = document.getElementById("error");
-    warning.style.display = "block";
+function getLogin() {
+    let inputs = document.getElementsByClassName("login__input");
 
-    let e = document.getElementById("error-text");
-    e.textContent = error.error;
+    let email = inputs.item(0);
+    let password = inputs.item(1);
 
-    let email = document.getElementById("email");
-    email.style.border = "1px solid #ED4159";
-    email.style.color = "#ED4159";
+    return {
+        "email": email.value,
+        "password": password.value,
+    };
+}
 
-    let pass = document.getElementById("password");
+function wrongLogin(response) {
+    let error = document.getElementsByClassName("login__error").item(0);
+    error.style.display = "block";
+    error.textContent = response.error;
+
+    let inputs = document.getElementsByClassName("login__input");
+
+    let email = inputs.item(0);
+    email.style.border = ERROR_BORDER_EMAIL;
+    email.style.color = ERROR_COLOR_EMAIL;
+
+    let pass = inputs.item(1);
     pass.value = "";
 }
 
-function accessLogin() {
+
+function accessLogin(response) {
+    localStorage.setItem("username", response.name);
+    localStorage.setItem("userPic", response.photoUrl);
+
     document.location.href = "user.html";
 }
+

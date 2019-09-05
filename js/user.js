@@ -1,8 +1,8 @@
 function loadUser() {
-    let userPic = document.getElementById("userpic");
+    let userPic = document.getElementsByClassName("user__pictures").item(0);
     userPic.src = localStorage.getItem("userPic");
 
-    let name = document.getElementById("username");
+    let name = document.getElementsByClassName("user__name").item(0);
     name.textContent = localStorage.getItem("username");
 }
 

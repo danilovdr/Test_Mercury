@@ -1,9 +1,25 @@
+/*@font-face {*/
+/*font-family: GothamBold;*/
+/*src: url("files/GothamPro-Medium.woff");*/
+/*}*/
+
 @font-face {
     font-family: GothamBold;
-    src: url("files/GothamBold.ttf");
+    src: url("files/GothamPro-Bold.woff"),
+    url("files/GothamPro-Bold.woff2");
+}
+
+@font-face {
+    font-family: GothamBlack;
+    src: url("files/GothamPro-Black.woff"),
+    url("files/GothamPro-Black.woff2");
+
+
 }
 
 @font-face {
     font-family: Gotham;
-    src: url("files/GothamMedium.ttf");
+    src: url("files/GothamPro-Medium.woff"),
+    url("files/GothamPro-Medium.woff2");
+
 }
