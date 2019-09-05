@@ -38,6 +38,14 @@ function getLogin() {
     };
 }
 
+function accessLogin(response) {
+    localStorage.setItem("username", response.name);
+    localStorage.setItem("userPic", response.photoUrl);
+
+    document.location.href = "user.html";
+}
+
+
 function wrongLogin(response) {
     let error = document.getElementsByClassName("login__error").item(0);
     error.style.display = "block";
@@ -52,12 +60,3 @@ function wrongLogin(response) {
     let pass = inputs.item(1);
     pass.value = "";
 }
-
-
-function accessLogin(response) {
-    localStorage.setItem("username", response.name);
-    localStorage.setItem("userPic", response.photoUrl);
-
-    document.location.href = "user.html";
-}
-

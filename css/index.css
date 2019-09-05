@@ -1,43 +1,29 @@
 /* Desktop */
 @media screen and (min-width: 980px) {
-    .logo {
-        margin: 142px auto 125px auto;
-    }
-
     .login {
+        /*width: 600px;*/
         width: calc(600px - 48px * 2);
-        padding: 48px 48px 60px 48px;
-    }
-
-    .login__title {
-        text-align: center;
-        margin: 0 0 48px 0;
-
-        line-height: 29px;
-    }
-
-    .login__input {
-        margin-bottom: 32px;
-    }
-
-    .login__submit {
-        margin: 48px auto 0 auto;
     }
 }
 
 /* Tablet */
 @media screen and (max-width: 979px) {
+    .login {
+        width: calc(450px - 48px * 2);
+    }
+}
+
+/* Desktop and tablet */
+@media screen and (min-width: 501px) {
     .logo {
         margin: 142px auto 125px auto;
     }
 
     .login {
-        width: calc(450px - 48px * 2);
         padding: 48px 48px 60px 48px;
     }
 
     .login__title {
-        text-align: center;
         margin: 0 0 48px 0;
 
         line-height: 29px;
@@ -65,7 +51,6 @@
     }
 
     .login__title {
-        text-align: center;
         margin: 0 0 32px 0;
 
         line-height: 24px;
@@ -78,7 +63,6 @@
     .login__submit {
         margin: 40px auto 0 auto;
     }
-
 }
 
 body {
@@ -98,6 +82,8 @@ body {
 }
 
 .login__title {
+    text-align: center;
+    letter-spacing: 0.2px;
     font-family: GothamBold, serif;
     color: #262626;
     font-size: 24px;
@@ -117,14 +103,12 @@ body {
     color: #262626;
     font-size: 16px;
     line-height: 20px;
+    mix-blend-mode: normal;
+    opacity: 0.8;
 }
 
 .login__input::placeholder {
     opacity: 0.4;
-}
-
-.login__input:focus {
-    opacity: 0.8;
 }
 
 .login__error {

@@ -1,37 +1,24 @@
 /* Desktop */
 @media screen and (min-width: 980px) {
-    .logo {
-        margin: 142px auto 125px auto;
-    }
-
     .user {
         width: 600px;
-        padding: 48px 0 60px;
-    }
-
-    .user__pictures {
-        width: 128px;
-    }
-
-    .user__name {
-        margin: 40px 0 0 0;
-
-        line-height: 34px;
-    }
-
-    .user__logout {
-        margin: 56px auto 0 auto;
     }
 }
 
 /* Tablet */
 @media screen and (max-width: 979px) {
+    .user {
+        width: 450px;
+    }
+}
+
+/* Desktop and tablet */
+@media screen and (min-width: 501px) {
     .logo {
         margin: 142px auto 125px auto;
     }
 
     .user {
-        width: 450px;
         padding: 48px 0 60px;
     }
 
